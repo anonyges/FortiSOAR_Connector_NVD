@@ -1,0 +1,1 @@
+LOGGER_NAME = 'danny_nist_nvd'

@@ -1,0 +1,275 @@
+{
+    "name": "danny_NIST_NVD",
+    "version": "1.0.0",
+    "label": "Danny_NIST_NVD",
+    "description": "NIST NVD Parser\nhttps://nvd.nist.gov/vuln/data-feeds",
+    "publisher": "",
+    "icon_small_name": "",
+    "icon_large_name": "",
+    "category": "",
+    "configuration": {},
+    "forked_from": false,
+    "operations": [
+        {
+            "description": "NIST NVD CPE Requests",
+            "operation": "cpe_requests",
+            "title": "NVD: Find CPE Values",
+            "parameters": [
+                {
+                    "title": "resultsPerPage",
+                    "name": "resultsPerPage",
+                    "description": "string of a resultsPerPage",
+                    "type": "integer",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "startIndex",
+                    "name": "startIndex",
+                    "description": "string of a startIndex",
+                    "type": "integer",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "modStartDate",
+                    "name": "modStartDate",
+                    "description": "string of a modStartDate",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "modEndDate",
+                    "name": "modEndDate",
+                    "description": "string of a modEndDate",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "includeDeprecated",
+                    "name": "includeDeprecated",
+                    "description": "string of a includeDeprecated ('true' or 'false')",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "keyword",
+                    "name": "keyword",
+                    "description": "string of a keyword",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cpeMatchString",
+                    "name": "cpeMatchString",
+                    "description": "string of a cpeMatchString",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "addOns",
+                    "name": "addOns",
+                    "description": "string of a addOns (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                }
+            ],
+            "output_schema": {},
+            "enabled": true
+        },
+        {
+            "description": "NIST NVD CVE Requests",
+            "operation": "cve_requests_simple",
+            "title": "NVD: Find CVE Value Simple",
+            "parameters": [
+                {
+                    "title": "cveId",
+                    "name": "cveId",
+                    "description": "string of a cveId",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": true
+                },
+                {
+                    "title": "addOns",
+                    "name": "addOns",
+                    "description": "string of a addOns",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                }
+            ],
+            "output_schema": {},
+            "enabled": true
+        },
+        {
+            "description": "NIST NVD CVE Requests",
+            "operation": "cve_requests",
+            "title": "NVD: Find CVE Values",
+            "parameters": [
+                {
+                    "title": "startIndex",
+                    "name": "startIndex",
+                    "description": "string of a startIndex",
+                    "type": "integer",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "resultsPerPage",
+                    "name": "resultsPerPage",
+                    "description": "string of a resultsPerPage",
+                    "type": "integer",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "pubStartDate",
+                    "name": "pubStartDate",
+                    "description": "string of a pubStartDate",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "pubEndDate",
+                    "name": "pubEndDate",
+                    "description": "string of a pubEndDate",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "modStartDate",
+                    "name": "modStartDate",
+                    "description": "string of a modStartDate",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "modEndDate",
+                    "name": "modEndDate",
+                    "description": "string of a modEndDate",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "includeMatchStringChange",
+                    "name": "includeMatchStringChange",
+                    "description": "string of a includeMatchStringChange ('true' or 'false')",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "keyword",
+                    "name": "keyword",
+                    "description": "string of a keyword",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "isExactMatch",
+                    "name": "isExactMatch",
+                    "description": "string of a isExactMatch",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cweId",
+                    "name": "cweId",
+                    "description": "string of a cweId (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cvssV2Severity",
+                    "name": "cvssV2Severity",
+                    "description": "string of a cvssV2Severity (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cvssV3Severity",
+                    "name": "cvssV3Severity",
+                    "description": "string of a cvssV3Severity (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cvssV2Metrics",
+                    "name": "cvssV2Metrics",
+                    "description": "string of a cvssV2Metrics (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cvssV3Metrics",
+                    "name": "cvssV3Metrics",
+                    "description": "string of a cvssV3Metrics (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "cpeMatchString",
+                    "name": "cpeMatchString",
+                    "description": "string of a cpeMatchString (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                },
+                {
+                    "title": "addOns",
+                    "name": "addOns",
+                    "description": "string of a addOns (cves)",
+                    "type": "text",
+                    "visible": true,
+                    "editable": true,
+                    "required": false
+                }
+            ],
+            "output_schema": {},
+            "enabled": true
+        }
+    ]
+}
